@@ -1,9 +1,8 @@
-package main
+package Day1
 
 import (
-  "fmt"
 )
 
-func main() {
-  fmt.Println("test");
+func ReviewSequence(s string) string {
+  return s;
 }
