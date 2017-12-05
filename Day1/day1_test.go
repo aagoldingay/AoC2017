@@ -25,16 +25,12 @@ func Test_ReviewSequenceP1(t *testing.T) {
 
 func Test_ReviewSequenceP2(t *testing.T) {
 	fmt.Println("TEST PART 2")
-	n := ReviewSequenceP2("11") 
-	if n != 1 {
-		t.Errorf("ERR - expected: %d, got: %d", 1, n)
-	}
-	/*for i, s := range testsp2 {
+	for i, s := range testsp2 {
 		fmt.Println("testing : ", s)
 		n := ReviewSequenceP2(s)
 		fmt.Println("result : ", n)
 		if n != resultsp2[i] {
 			t.Errorf("ERR - expected: %d, got %d", resultsp2[i], n)
 		}
-	}*/
+	}
 }

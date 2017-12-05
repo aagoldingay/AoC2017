@@ -1,9 +1,10 @@
 package main
 
-import "fmt"
+import ()
 
 func ReviewSequenceP1(s string) int {
   lastNum, result := 0, 0
+
   for i, c := range s {
     if int(c)%48 == lastNum {
       result += lastNum
@@ -17,12 +18,15 @@ func ReviewSequenceP1(s string) int {
 }
 
 func ReviewSequenceP2(s string) int {
-  half, result := len(s)/2, 0
-  //figure out mod
-  result = half
+  half, numAhead, result := len(s)/2, 0, 0
+
+  for i, c := range s {
+    numAhead = int(s[(i + half) % len(s)])
+    if int(c) == numAhead {
+      result += numAhead % 48
+    }
+  }
   return result
 }
 
-func main() {
-  fmt.Println("placeholder")
-}
+func main() {}
